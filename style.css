@@ -97,6 +97,15 @@ h1 {
 	margin: 0.67em 0;
 }
 
+h2 {
+    text-transform: uppercase;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
 /* Grouping content
 	 ========================================================================== */
 
@@ -239,6 +248,7 @@ button,
 [type="reset"],
 [type="submit"] {
 	-webkit-appearance: button;
+    cursor: pointer;
 }
 
 /**
@@ -652,8 +662,40 @@ textarea {
     flex-direction: column;
 }
 
+#home {
+    position: relative;
+}
+
 main {
     flex: 1;
+}
+
+.full, .home__caro {
+    min-height: 100vh;
+}
+
+.home__caro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+}
+
+.home__text {
+    background: var(--e-global-color-primary);
+    width: 45%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 5%;
+    position: absolute;
+    z-index: 1;
+    filter: drop-shadow(0 0 0.75rem rgba(56, 56, 56, 0.2));
+}
+
+.home__text img {
+    margin-bottom: 3.5em;
 }
 
 header#masthead {
@@ -949,6 +991,43 @@ footer {
 
 .gallery-caption {
 	display: block;
+}
+
+.caro {
+    display: flex;
+}
+
+.caro__item {
+    background-image: url('/hadley/wp-content/uploads/2021/05/s-o-c-i-a-l-c-u-t-OjnmCKmzr3A-unsplash.jpg');
+    background-size: cover;
+    height: 475px;
+    padding: 3%;
+    margin: 0 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border: 2px solid var(--e-global-color-text);
+    position: relative;
+}
+
+.caro__item:last-child {
+    border-bottom-right-radius: 45px;
+    border: 2px solid var(--e-global-color-text);
+}
+
+.caro__item:before {
+    content: '';
+    background-color: rgba(248, 246, 242, 0.9);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
+
+.caro__content {
+    z-index: 1;
 }
 
 /*--------------------------------------------------------------
